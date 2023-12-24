@@ -4,6 +4,9 @@ import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import TopLeftImg from "@/components/TopLeftImg";
 import Header from "@/components/Header";
+import { AnimatePresence, motion } from "framer-motion";
+import Transition from "@/components/Transition";
+import Layout from "@/components/Layout";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -26,10 +29,12 @@ export default function RootLayout({
       <body
         className={`${sora.className} page bg-site text-white bg-cover bg-no-repeat font-sora relative`}
       >
-        <TopLeftImg />
-        <Nav />
-        <Header />
-        {children}
+        <Layout>
+          <TopLeftImg />
+          <Nav />
+          <Header />
+          {children}
+        </Layout>
       </body>
     </html>
   );
