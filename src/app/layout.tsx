@@ -1,16 +1,14 @@
+import Header from "@/components/Header";
+import Layout from "@/components/Layout";
 import Nav from "@/components/Nav";
-import "./globals.css";
+import TopLeftImg from "@/components/TopLeftImg";
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
-import TopLeftImg from "@/components/TopLeftImg";
-import Header from "@/components/Header";
-import { AnimatePresence, motion } from "framer-motion";
-import Transition from "@/components/Transition";
-import Layout from "@/components/Layout";
+import "./globals.css";
 
 const sora = Sora({
   subsets: ["latin"],
-  variable: "--font sora",
+  // variable: "--font sora",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
 
@@ -27,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sora.className} page bg-site text-white bg-cover bg-no-repeat font-sora relative`}
+        className={`${sora.className}  page bg-site text-white bg-cover bg-no-repeat font-sora relative`}
       >
         <Layout>
           <TopLeftImg />

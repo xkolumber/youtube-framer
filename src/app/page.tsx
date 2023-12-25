@@ -1,4 +1,5 @@
 import ProjectsBtn from "@/components/ProjectsBtn";
+import { motion } from "framer-motion";
 
 const page = () => {
   return (
