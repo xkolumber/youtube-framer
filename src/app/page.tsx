@@ -1,3 +1,6 @@
+import MotionDivElement from "@/components/MotionDivElement";
+import MotionDivP from "@/components/MotionDivP";
+import ParticlesContainer from "@/components/ParticlesContainer";
 import ProjectsBtn from "@/components/ProjectsBtn";
 import { motion } from "framer-motion";
 
@@ -10,13 +13,13 @@ const page = () => {
             Transforming Ideas <br /> Intro{""}
             <span className="text-accent">Digial Reality</span>
           </h1>
-          <p className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis
-            asperiores est nobis optio quas aut?
-          </p>
+          <ParticlesContainer />
+          <MotionDivP />
+
           <div className="flex justify-center xl:hidden relative">
             <ProjectsBtn />
           </div>
+          <MotionDivElement />
         </div>
       </div>
     </div>
