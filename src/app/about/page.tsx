@@ -29,19 +29,23 @@ const aboutData = [
       {
         title: "Web Development",
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          <FaHtml5 key={1} />,
+          <FaCss3 key={2} />,
+          <FaJs key={3} />,
+          <FaReact key={4} />,
+          <SiNextdotjs key={5} />,
+          <SiFramer key={6} />,
+          <FaWordpress key={7} />,
         ],
         stage: "",
       },
       {
         title: "UI/UX Design",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [
+          <FaFigma key={1} />,
+          <SiAdobexd key={2} />,
+          <SiAdobephotoshop key={3} />,
+        ],
       },
     ],
   },
@@ -102,7 +106,7 @@ const aboutData = [
   },
 ];
 
-const page = () => {
+const Page = () => {
   const [index, setIndex] = useState(0);
 
   console.log(index);
@@ -139,9 +143,10 @@ const page = () => {
             exit="hidden"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            10 years ago, I began freelanging as a developer. Since then, I've
-            done remote work for agencies, counsulted for startups, and
-            collaborated on a digital products for business and consumer use.
+            10 years ago, I began freelanging as a developer. Since then,
+            I&apos;ve done remote work for agencies, counsulted for startups,
+            and collaborated on a digital products for business and consumer
+            use.
           </motion.p>
 
           <motion.div
@@ -223,7 +228,11 @@ const page = () => {
                   <div>{item.stage}</div>
                   <div className="flex gap-x-4">
                     {item.icons?.map((icon, itemIndex) => {
-                      return <div className="text-2xl text-white">{icon}</div>;
+                      return (
+                        <div className="text-2xl text-white" key={itemIndex}>
+                          {icon}
+                        </div>
+                      );
                     })}
                     {}
                   </div>
@@ -237,4 +246,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
