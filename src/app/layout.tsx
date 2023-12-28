@@ -27,12 +27,15 @@ export default function RootLayout({
       <body
         className={`${sora.className}  page bg-site text-white bg-cover bg-no-repeat font-sora relative`}
       >
-        <Layout>
+        <TopLeftImg />
+        <Nav />
+        <Header />
+        {children}
+        {/* <Layout>
           <TopLeftImg />
           <Nav />
           <Header />
-          {children}
-        </Layout>
+        </Layout> */}
       </body>
     </html>
   );

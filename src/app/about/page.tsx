@@ -1,7 +1,13 @@
+import ParticlesContainer from "@/components/ParticlesContainer";
 import React from "react";
 
 const page = () => {
-  return <div>About</div>;
+  return (
+    <div>
+      {" "}
+      <ParticlesContainer />
+    </div>
+  );
 };
 
 export default page;
