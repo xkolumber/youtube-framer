@@ -13,8 +13,9 @@ const ParticlesContainer = () => {
     });
   }, []);
 
-  const particlesLoaded = (container: any) => {
+  const particlesLoaded = async (container: any): Promise<void> => {
     console.log(container);
+    // Your additional logic here
   };
 
   return (
